@@ -1,7 +1,7 @@
 # S86_BhanuSree_Capstone_OutfitPlanner
 # Outfit Planner – Smart Clothing Recommendations
 
-## 📝 Project Description
+##  Project Description
 
 - A web-based outfit recommendation system  
 - Suggests clothing based on:  
@@ -13,7 +13,7 @@
 - Aims to reduce wardrobe confusion  
 - Focuses on both fashion and comfort  
 
-## 🌟 Key Features
+## Key Features
 
 - Weather-based outfit suggestions  
 - Activity/event-based recommendations  
@@ -24,7 +24,7 @@
 - View recommendations based on date and location  
 - Responsive design for mobile and desktop  
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: React.js  
 - **Backend**: Node.js / Express  
@@ -33,7 +33,7 @@
 - **Authentication**: Firebase / JWT  
 - **Deployment**: Vercel / Netlify / Render  
 
-## 📅 Day-by-Day Plan
+##  Day-by-Day Plan
 
 ## Day 1 – Low-Fidelity Wireframes:  
 
