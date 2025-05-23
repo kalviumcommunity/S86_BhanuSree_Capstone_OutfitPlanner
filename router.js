@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { getOutfits, addOutfit } = require('./controller');
+const { getOutfits, createOutfit, updateOutfit } = require('./controller');
 
-// GET outfits based on weather, activity, timeOfDay
 router.get('/outfits', getOutfits);
-
-// POST new outfit
-router.post('/outfits', addOutfit);
+router.post('/outfits', createOutfit);
+router.put('/outfits/:id', updateOutfit);
 
 module.exports = router;
