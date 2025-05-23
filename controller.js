@@ -1,5 +1,6 @@
 const Outfit = require('./schema');
 
+// GET /api/outfits
 const getOutfits = async (req, res) => {
   try {
     const { weather, activity, timeOfDay } = req.query;
@@ -22,4 +23,23 @@ const getOutfits = async (req, res) => {
   }
 };
 
-module.exports = { getOutfits };
+// POST /api/outfits
+const addOutfit = async (req, res) => {
+  try {
+    const { weather, activity, timeOfDay, outfitImage } = req.body;
+
+    if (!weather || !activity || !timeOfDay || !outfitImage) {
+      return res.status(400).json({ message: 'All fields are required.' });
+    }
+
+    const newOutfit = new Outfit({ weather, activity, timeOfDay, outfitImage });
+    const savedOutfit = await newOutfit.save();
+
+    res.status(201).json(savedOutfit);
+  } catch (error) {
+    console.error('Error adding outfit:', error.message);
+    res.status(500).json({ message: 'Server Error' });
+  }
+};
+
+module.exports = { getOutfits, addOutfit };
