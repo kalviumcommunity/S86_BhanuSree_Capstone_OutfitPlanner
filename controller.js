@@ -1,6 +1,5 @@
 const Outfit = require('./schema');
 
-// GET /api/outfits
 const getOutfits = async (req, res) => {
   try {
     const { weather, activity, timeOfDay } = req.query;
@@ -23,23 +22,42 @@ const getOutfits = async (req, res) => {
   }
 };
 
-// POST /api/outfits
-const addOutfit = async (req, res) => {
+const createOutfit = async (req, res) => {
   try {
     const { weather, activity, timeOfDay, outfitImage } = req.body;
-
     if (!weather || !activity || !timeOfDay || !outfitImage) {
       return res.status(400).json({ message: 'All fields are required.' });
     }
 
     const newOutfit = new Outfit({ weather, activity, timeOfDay, outfitImage });
-    const savedOutfit = await newOutfit.save();
-
-    res.status(201).json(savedOutfit);
+    await newOutfit.save();
+    res.status(201).json(newOutfit);
   } catch (error) {
-    console.error('Error adding outfit:', error.message);
+    console.error('Error creating outfit:', error.message);
     res.status(500).json({ message: 'Server Error' });
   }
 };
 
-module.exports = { getOutfits, addOutfit };
+const updateOutfit = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { weather, activity, timeOfDay, outfitImage } = req.body;
+
+    const updatedOutfit = await Outfit.findByIdAndUpdate(
+      id,
+      { weather, activity, timeOfDay, outfitImage },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedOutfit) {
+      return res.status(404).json({ message: 'Outfit not found.' });
+    }
+
+    res.status(200).json(updatedOutfit);
+  } catch (error) {
+    console.error('Error updating outfit:', error.message);
+    res.status(500).json({ message: 'Server Error' });
+  }
+};
+
+module.exports = { getOutfits, createOutfit, updateOutfit };
