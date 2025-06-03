@@ -1,0 +1,22 @@
+meta {
+  name: outfit
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:5000/api/outfits?weather=cold&activity=travel&timeOfDay=day
+  body: none
+  auth: inherit
+}
+
+params:query {
+  weather: cold
+  activity: travel
+  timeOfDay: day
+}
+
+body:json {
+  
+  
+}
