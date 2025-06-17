@@ -54,8 +54,14 @@ Tech stack (MERN)
 Key features
 Set up GitHub Projects board for task tracking
 
+<<<<<<< feat/user-outfit-relationship
 ## Backend Deployment Link :
  https://s86-bhanusree-capstone-outfitplanner.onrender.com
+=======
+## Backend Deployment Link:
+https://s86-bhanusree-capstone-outfitplanner.onrender.com
+
+>>>>>>> main
 
 
   
