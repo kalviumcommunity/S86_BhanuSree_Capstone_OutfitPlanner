@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "outfit design",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
