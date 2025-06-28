@@ -1,0 +1,40 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-color: white; /* plain background */
+  box-sizing: border-box;
+}
+
+.weather-box {
+  border: 1px solid #333;
+  background-color: white; /* clean background */
+  padding: 20px;
+  width: 160px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-section h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #555;
+}

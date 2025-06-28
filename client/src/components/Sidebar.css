@@ -1,0 +1,36 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ff99cc, #ffe0f0);
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #aaa;
+}
+
+.sidebar h2 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #4a0033;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.sidebar a:hover {
+  font-weight: bold;
+}
